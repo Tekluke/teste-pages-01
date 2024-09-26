@@ -42,6 +42,7 @@ $(document).ready(function () {
         origin: "left",
         duration: 2000,
         distance: "20%",
+        reset: false,
       });
     });
     
@@ -52,6 +53,7 @@ $(document).ready(function () {
         origin: "right",
         duration: 2000,
         distance: "20%",
+        reset: false,
       });
     });
   });
