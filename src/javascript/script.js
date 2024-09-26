@@ -33,6 +33,7 @@ function handleAnimations() {
     //Efeitos de fade
     const elementsL = document.querySelectorAll(".fadeL");
     elementsL.forEach((element) => {
+      element.style.display = "block";
       ScrollReveal().reveal(element, {
         origin: "left",
         duration: 2000,
@@ -42,6 +43,7 @@ function handleAnimations() {
 
     const elementsR = document.querySelectorAll(".fadeR");
     elementsR.forEach((element) => {
+      element.style.display = "block";
       ScrollReveal().reveal(element, {
         origin: "right",
         duration: 2000,
