@@ -119,12 +119,11 @@ section {
   }
 
   #whatsapp-button {
-    bottom: 6rem;
-    right: 4rem;
+    bottom: 2rem;
+    right: 2rem;
     width: 5rem;
     height: 5rem;
     font-size: 3rem;
-    display: none;
   }
 
   .wpp_frase {

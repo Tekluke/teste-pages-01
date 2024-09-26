@@ -4,7 +4,7 @@ elements.forEach((element) => {
   ScrollReveal().reveal(element, {
     origin: "left",
     duration: 2000,
-    distance: "20%",
+    distance: "10%",
   });
 });
 
@@ -14,7 +14,7 @@ elements2.forEach((element) => {
   ScrollReveal().reveal(element, {
     origin: "right",
     duration: 2000,
-    distance: "20%",
+    distance: "10%",
   });
 });
 
