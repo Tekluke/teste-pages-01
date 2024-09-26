@@ -1,5 +1,5 @@
 #dobra_1 {
-  height: calc(100vh - 158px);
+  height: calc(100vh - 183px);
 }
 
 #dobra_2,
@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .texto {
@@ -140,10 +141,6 @@ h4 {
   text-align: start;
 }
 
-#logo_mobile {
-  display: none;
-}
-
 @media screen and (max-width: 1440px) {
   #dobra_1 {
     height: calc(100vh - 156px);
@@ -185,32 +182,26 @@ h4 {
 
 @media screen and (max-width: 1024px) {
   #dobra_1 {
-    height: 100vh;
+    height: calc(100vh - 152px);
     background-image: url("../images/heroMobile.png");
-    background-position: -7rem 0;
-  }
-
-  #dobra_1,
-  #dobra_2,
-  #dobra_3 {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  #logo_mobile {
-    position: absolute;
-    top: 2rem;
-    display: block;
-    width: 60%;
-  }
-
-  #logo_mobile img {
-    width: 100%;
+    background-position: -3rem -7rem;
   }
 
   #dobra_2,
   #dobra_3 {
     height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  #dobra_2,
+  #dobra_3 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6rem;
   }
 
   #dobra_3 {
@@ -221,8 +212,7 @@ h4 {
     color: var(--color-neutral-0);
   }
 
-  #dobra_1 .descricao,
-  #texto_btn h4 {
+  #dobra_1 .descricao, #texto_btn h4 {
     font-size: 1.8rem;
     color: var(--color-neutral-0);
   }
@@ -237,15 +227,9 @@ h4 {
   }
 
   #dobra_2 .subtitulo,
-  .subtitulo,
-  #texto_btn h3,
+  .subtitulo, #texto_btn h3,
   #dobra_3 h3 {
     font-size: 2.3rem;
-  }
-
-  #dobra_2 .hero,
-  #dobra_3 .hero {
-    margin-bottom: 3rem;
   }
 
   .hero {
@@ -275,13 +259,9 @@ h4 {
     font-size: 2rem;
     text-align: center;
   }
-
-  #texto_btn .fa-whatsapp {
-    font-size: 2.5rem;
-  }
-
+  #texto_btn .fa-whatsapp,
   #texto_btn .fa-phone {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -295,33 +275,34 @@ h4 {
     display: none;
   }
 
-  #dobra_1 .descricao,
-  #texto_btn h4 {
+  #dobra_2,
+  #dobra_3 {
+    gap: 4rem;
+  }
+
+  #dobra_1 .descricao, #texto_btn h4 {
     font-size: 1.2rem;
   }
 
   #dobra_2 .titulo,
-  #dobra_3 .titulo,
-  .titulo {
+  #dobra_3 .titulo, .titulo {
     font-size: 2rem;
     text-align: center;
   }
 
   #dobra_2 .subtitulo,
-  .subtitulo,
-  #texto_btn h3,
+  .subtitulo, #texto_btn h3,
   #dobra_3 h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
-  #dobra_2 .descricao,
-  .descricao {
+  #dobra_2 .descricao, .descricao{
     text-align: center;
     font-size: 1.4rem;
   }
 
   .texto {
-    gap: 1.6rem;
+    gap: 1rem;
   }
 
   .descricao i {
@@ -332,6 +313,10 @@ h4 {
     width: 25rem;
     font-size: 1.6rem;
     text-align: center;
+  }
+  #texto_btn .fa-whatsapp,
+  #texto_btn .fa-phone {
+    font-size: 2.5rem;
   }
 
   #contato {
