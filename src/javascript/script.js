@@ -1,56 +1,29 @@
 // Efeitos de Fade
 
 function handleAnimations() {
-  // Verifica a largura da viewport
-  if (window.innerWidth <= 768) {
-    // Ocultar elementos fadeL e fadeR
-    const elementsL = document.querySelectorAll(".fadeL");
-    elementsL.forEach((element) => {
-      element.style.display = "none";
-    });
-    const elementsR = document.querySelectorAll(".fadeR");
-    elementsR.forEach((element) => {
-      element.style.display = "none";
-    });
+  const elements = document.querySelectorAll('.fadeL, .fadeR');
 
-    // Mostrar e animar elementos fadeM
-    const elementsM = document.querySelectorAll(".fadeM");
-    elementsM.forEach((element) => {
-      element.style.display = "block";
-      ScrollReveal().reveal(element, {
-        origin: "bottom",
-        duration: 2000,
-        distance: "20%",
-      });
-    });
-  } else {
-    // Ocultar elementos fadeM
-    const elementsM = document.querySelectorAll(".fadeM");
-    elementsM.forEach((element) => {
-      element.style.display = "none";
-    });
+  elements.forEach(element => {
+    const revealConfig = {
+      duration: 2000,
+    };
 
-    //Efeitos de fade
-    const elementsL = document.querySelectorAll(".fadeL");
-    elementsL.forEach((element) => {
-      element.style.display = "block";
-      ScrollReveal().reveal(element, {
-        origin: "left",
-        duration: 2000,
-        distance: "20%",
-      });
-    });
+    if (window.innerWidth <= 768) {
+      // Para telas menores ou iguais a 768px
+      revealConfig.origin = 'bottom';
+      revealConfig.distance = '20%';
+    } else {
+      // Para telas maiores que 768px
+      if (element.classList.contains('fadeL')) {
+        revealConfig.origin = 'left';
+      } else {
+        revealConfig.origin = 'right';
+      }
+      revealConfig.distance = '20%';
+    }
 
-    const elementsR = document.querySelectorAll(".fadeR");
-    elementsR.forEach((element) => {
-      element.style.display = "block";
-      ScrollReveal().reveal(element, {
-        origin: "right",
-        duration: 2000,
-        distance: "20%",
-      });
-    });
-  }
+    ScrollReveal().reveal(element, revealConfig);
+  });
 }
 
 // Chamar a função quando a página carregar e sempre que o tamanho da janela mudar
