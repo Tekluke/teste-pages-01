@@ -26,10 +26,6 @@ function handleAnimations() {
   });
 }
 
-// Chamar a função quando a página carregar e sempre que o tamanho da janela mudar
-window.onload = handleAnimations;
-window.addEventListener("resize", handleAnimations);
-
 // Garante que a página role para o topo após todos os recursos serem carregados
 $(window).on("load", function () {
   setTimeout(function () {
